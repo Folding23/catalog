@@ -1,0 +1,57 @@
+<view class="wrap">
+<!-- fs -->
+
+  <view class="form">
+      <view class="role" >
+      <image src="../../../images/my/index/avatar.png" mode=""/>
+      </view>
+      <view class="name">
+        <text>MITE</text>
+      </view>
+
+      <view class="show">
+            <view class="info">
+                  <view class="info-item">
+                    <view class="info-pic">0</view>
+                    <view class="info-text">图片</view>
+                  </view>
+                  <view class="gang"></view>
+                  <view class="info-item">
+                    <view class="info-pic">0</view>
+                    <view class="info-text">图片被赞</view>
+                  </view>
+                  <view class="gang"></view>
+                  <view class="info-item">
+                    <view class="info-pic">0</view>
+                    <view class="info-text">成品看</view>
+                  </view>
+            </view>
+            <view class="choose">
+              <view class="choose-item">
+                <image src="../../../images/my/index/edit.png" />
+                <view class="title" bind:tap="changeRange">修改个人信息</view>
+              </view>
+              <view class="choose-item">
+                <image src="../../../images/my/index/friend.png" />
+                <button open-type="share" class="butten-text">
+                  邀请好友
+                </button>
+              </view>
+              <view class="choose-item">
+                <image src="../../../images/my/index/like.png" />
+                <view class="title" bindtap="onAttention">我关注的卡片</view>
+              </view>
+              <view class="choose-item">
+                <image src="../../../images/my/index/bubble.png" />
+                <view class="title" bindtap="onFeedback">信息反馈</view>
+              </view>
+              <view class="choose-item">
+                <image src="../../../images/my/index/close.png" />
+                <view class="title" bind:tap="onFree">清除缓存</view>
+              </view>
+            </view>
+        </view>
+  </view>
+  <popup class="popup" id='popup' title='修改个人信息' avatarUrl="{{avatarUrl}}"></popup>
+</view>
+

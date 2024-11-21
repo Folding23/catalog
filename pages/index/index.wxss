@@ -1,0 +1,113 @@
+/**index.wxss**/
+page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.search{
+    width: 87%;
+    box-shadow: 4rpx 4rpx 8rpx 2rpx rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    padding: 5rpx 5rpx 5rpx 20rpx;
+    box-sizing: border-box;
+    border-radius: 26rpx;
+    margin-top: 20rpx;
+}
+.search image{
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 20rpx;
+}
+.search input{
+    font-size: 28rpx;
+    flex-grow: 1;
+}
+.search .btn-search{
+    color: #FFF;
+    background-color: #d1c293;
+    width: 80rpx;
+    height: 40rpx;
+    border-radius: 20rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search .btn-search text{
+    font-size: 25rpx;
+    letter-spacing: 2rpx;
+}
+.nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 25rpx;
+}
+.btn{
+    width: 25%;
+    height: 50rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    box-sizing: border-box;
+    padding: 10rpx 10rpx;
+    border-radius: 25rpx;
+    font-size: 25rpx;
+    font-weight: 700;
+    letter-spacing: 3rpx;
+}
+.selected{
+    box-shadow: 4rpx 3rpx 6rpx 3rpx rgba(0, 0, 0, 0.2);
+}
+.btn:first-child{
+    letter-spacing: 20rpx;
+}
+.btn image{
+    width: 50rpx;
+    height: 50rpx;
+}
+.cards{
+    margin: 35rpx 0;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 40rpx;
+}
+.cards .card{
+    box-shadow: 8rpx 6rpx 10rpx 4rpx rgba(0, 0, 0, 0.2);
+    padding-bottom: 40rpx;
+}
+.cards .card > image{
+    height: 380rpx;
+    width: 100%;
+}
+.cards .card .info{
+    display: flex;
+    padding: 20rpx 40rpx 0;
+    gap: 20rpx;
+}
+.cards .card .info .text{
+    font-size: 27rpx;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 20rpx;
+    letter-spacing: 3rpx;
+}
+.cards .card .info .text .name{
+    font-size: 50rpx;
+    font-weight: 700;
+    letter-spacing: 13rpx;
+}
+.cards .card .info .img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25rpx;
+    font-weight: 700;
+}
+.cards .card .info .img image{
+    width: 120rpx;
+    height: 120rpx;
+}

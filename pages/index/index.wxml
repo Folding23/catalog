@@ -1,0 +1,41 @@
+<view class="search">
+    <image src="/img/搜索-off.png" mode="aspectFit"/>
+    <input type="text" confirm-type="search" placeholder="输入动物昵称" />
+    <view class="btn-search">
+        <text>搜索</text>
+    </view>
+</view>
+
+<view class="nav">
+    <view class="btn {{style1}}" bindtap="selected1">
+        <image src="/img/推荐.png" mode=""/>
+        <text>推荐</text>
+    </view>
+    <view class="btn {{style2}}" bindtap="selected2">
+        <image src="/img/点赞排名.png" mode=""/>
+        <text>点赞排名</text>
+    </view>
+    <view class="btn {{style3}}" bindtap="selected3">
+        <image src="/img/我的关注.png" mode=""/>
+        <text>我的关注</text>
+    </view>
+</view>
+
+<view class="cards">
+    <navigator url="/pages/detail/detail" wx:for="{{cards}}">
+        <view class="card">
+            <image src="{{item.img_src}}" mode="aspectFill"/>
+            <view class="info">
+                <view class="text">
+                    <view class="name">{{item.name}}</view>
+                    <text class="location"><text>地点：</text>{{item.location}}</text>
+                    <text class="intro">{{item.intro}}</text>
+                </view>
+                <view class="img">
+                    <image src="/img/点赞-off.png" mode=""/>
+                    <text class="like-num">{{item.like_num}}</text>
+                </view>
+            </view>
+        </view>
+    </navigator>
+</view>

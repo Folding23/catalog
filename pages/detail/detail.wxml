@@ -1,0 +1,26 @@
+<view class="detail">
+    <image src="/img/cat.jpg" mode="aspectFill"/>
+    <view class="info">
+        <text class="name">暹罗猫</text>
+        <view class="location"><text>出没地点：</text>不在福州大学</view>
+        <text class="intro">一大堆简介一大堆简介一大堆简介一大堆简介一大堆简介一大堆简介一大堆简介一大堆简介一大堆简介一大堆简介一大堆简介</text>
+    </view>
+    <view class="interaction">
+        <view class="btn">
+            <image src="/img/点赞-off.png" mode=""/>
+        </view>
+        <view class="btn">
+            <image src="/img/收藏-off.png" mode=""/>
+        </view>
+        <view class="btn">
+            <image src="/img/追加.png" mode=""/>
+        </view>
+    </view>
+</view>
+<view class="photos">
+    <image src="/img/cat.jpg" mode="aspectFill"/>
+    <image src="/img/cat.jpg" mode="aspectFill"/>
+    <image src="/img/cat.jpg" mode="aspectFill"/>
+    <image src="/img/cat.jpg" mode="aspectFill"/>
+    <image src="/img/cat.jpg" mode="aspectFill"/>
+</view>
