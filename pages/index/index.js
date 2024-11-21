@@ -1,7 +1,9 @@
 Page({
 
     "data":{
-        style1:"",
+        style1:"selected",
+        style2:"",
+        style3:"",
         cards:[{
             img_src:"/img/cat.jpg",
             name:"橘猫",
@@ -17,8 +19,26 @@ Page({
         }]
     },
     
-    seleced1(){
-        this.setData
+    selected1(){
+        this.setData({
+            style1:"selected",
+            style2:"",
+            style3:"",
+        })
+    },
+    selected2(){
+        this.setData({
+            style1:"",
+            style2:"selected",
+            style3:"",
+        })
+    },
+    selected3(){
+        this.setData({
+            style1:"",
+            style2:"",
+            style3:"selected",
+        })
     }
 })
 
