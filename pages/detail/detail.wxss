@@ -38,3 +38,6 @@ page {
     flex-direction: column;
     gap: 20rpx;
 }
+.photos > image:last-child{
+    margin-bottom: 40rpx;
+}

@@ -1,9 +1,9 @@
 <view class="detail">
-    <image src="/img/cat.jpg" mode="aspectFill"/>
+    <image src="{{img_src}}" mode="aspectFill"/>
     <view class="info">
-        <text class="name">暹罗猫</text>
-        <view class="location"><text>出没地点：</text>不在福州大学</view>
-        <text class="intro">一大堆简介一大堆简介一大堆简介一大堆简介一大堆简介一大堆简介一大堆简介一大堆简介一大堆简介一大堆简介一大堆简介</text>
+        <text class="name">{{name}}</text>
+        <view class="location"><text>出没地点：</text>{{location}}</view>
+        <text class="intro">{{intro}}</text>
     </view>
     <view class="interaction">
         <view class="btn">
@@ -18,9 +18,5 @@
     </view>
 </view>
 <view class="photos">
-    <image src="/img/cat.jpg" mode="aspectFill"/>
-    <image src="/img/cat.jpg" mode="aspectFill"/>
-    <image src="/img/cat.jpg" mode="aspectFill"/>
-    <image src="/img/cat.jpg" mode="aspectFill"/>
-    <image src="/img/cat.jpg" mode="aspectFill"/>
+    <image wx:for="{{photos}}" src="{{item}}" mode="aspectFill"/>
 </view>
