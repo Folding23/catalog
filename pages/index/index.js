@@ -4,6 +4,9 @@ Page({
         style1:"selected",
         style2:"",
         style3:"",
+        card_style:"normal",
+        rank_show:"",
+        new_msg:true,
         cards:[{
             img_src:"/img/cat.jpg",
             name:"橘猫",
@@ -16,6 +19,24 @@ Page({
             location:"不在福州大学",
             intro:"已绝育，未领养，性格温和，白天喜欢睡觉",
             like_num:143223
+        },{
+            img_src:"/img/cat.jpg",
+            name:"橘猫",
+            location:"不在福州大学",
+            intro:"已绝育，未领养，性格温和，白天喜欢睡觉",
+            like_num:143223
+        },{
+            img_src:"/img/cat.jpg",
+            name:"橘猫",
+            location:"不在福州大学",
+            intro:"已绝育，未领养，性格温和，白天喜欢睡觉",
+            like_num:143223
+        },{
+            img_src:"/img/cat.jpg",
+            name:"橘猫",
+            location:"不在福州大学",
+            intro:"已绝育，未领养，性格温和，白天喜欢睡觉",
+            like_num:143223
         }]
     },
     
@@ -24,6 +45,7 @@ Page({
             style1:"selected",
             style2:"",
             style3:"",
+            card_style:"normal",
         })
     },
     selected2(){
@@ -31,6 +53,8 @@ Page({
             style1:"",
             style2:"selected",
             style3:"",
+            card_style:"special",
+            rank_show:""
         })
     },
     selected3(){
@@ -38,6 +62,8 @@ Page({
             style1:"",
             style2:"",
             style3:"selected",
+            card_style:"special",
+            rank_show:"unshow"
         })
     }
 })

@@ -10,8 +10,36 @@ Page({
         location:"不在福州大学",
         intro:"一大堆简介一大堆简介一大堆简介一大堆简介一大堆简介一大堆简介一大堆简介一大堆简介一大堆简介一大堆简介一大堆简介",
         photos:[
-            "/img/cat.jpg",
-        ]
+            {
+                month:"12月",
+                photo:[
+                    "/img/cat2.jpg",
+                    "/img/cat3.jpg",
+                    "/img/cat4.jpg",
+                    "/img/cat5.jpg",
+                    "/img/cat.jpg",
+                    "/img/cat.jpg",
+                    "/img/cat.jpg",
+                ]
+            },{
+                month:"11月",
+                photo:[
+                    "/img/cat.jpg",
+                    "/img/cat.jpg",
+                    "/img/cat.jpg",
+                    "/img/cat.jpg",
+                    "/img/cat.jpg",
+                ]
+            },{
+                month:"10月",
+                photo:[
+                    "/img/cat.jpg",
+                    "/img/cat.jpg",
+                ]
+            },
+        ],
+        showing_photo:"/img/cat.jpg",
+        display:"none"
     },
 
     /**
@@ -20,7 +48,21 @@ Page({
     onLoad(options) {
 
     },
-
+    // 点击图片，显示大图
+    tapPhoto(e){
+        console.log();
+        let src = e.currentTarget.dataset.photosrc;
+        this.setData({
+            showing_photo:src,
+            display:"",
+        })
+    },
+    // 点击大图，关闭显示
+    clickClose(){
+        this.setData({
+            display:"none",
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

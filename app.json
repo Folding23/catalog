@@ -6,7 +6,8 @@
     "pages/detail/detail",
     "pages/my/index/index",
     "pages/my/feekback/feekback",
-    "pages/my/attention/attention"
+    "pages/my/attention/attention",
+    "pages/msg/msg"
   ],
   "window": {
     "navigationBarBackgroundColor": "#d1c293",
@@ -23,11 +24,6 @@
         "text": "直播",
         "iconPath": "/img/直播-off.png",
         "selectedIconPath": "/img/直播-on.png"
-      },{
-        "pagePath": "pages/new/new",
-        "text": "新建",
-        "iconPath": "/img/追加.png",
-        "selectedIconPath": "/img/追加.png"
       },{
         "pagePath": "pages/my/index/index",
         "text": "我的",

@@ -4,8 +4,15 @@ page {
   flex-direction: column;
   align-items: center;
 }
-.search{
+/* -----------------------head部分开始----------------------- */
+.head{
+    display: flex;
+    align-items: flex-end;
     width: 87%;
+}
+/* -----------------------search部分开始--------------------- */
+.search{
+    width: 89%;
     box-shadow: 4rpx 4rpx 8rpx 2rpx rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
@@ -37,6 +44,30 @@ page {
     font-size: 25rpx;
     letter-spacing: 2rpx;
 }
+/* -----------------------search部分结束--------------------- */
+/* -----------------------message部分开始-------------------- */
+.msg{
+    width: 50rpx;
+    height: 50rpx;
+    padding-top: 5rpx;
+    padding-left: 20rpx;
+    position: relative;
+}
+.msg image{
+    width: 100%;
+    height: 100%;
+}
+.msg .new_msg{
+    width: 16rpx;
+    height: 16rpx;
+    position: absolute;
+    top: 0;
+    right: -5rpx;
+    background-color: rgb(226, 97, 97);
+    border-radius: 50%;
+}
+/* -----------------------msg部分结束--------------------- */
+/* -----------------------nav部分开始--------------------- */
 .nav{
     display: flex;
     width: 100%;
@@ -67,6 +98,8 @@ page {
     width: 50rpx;
     height: 50rpx;
 }
+/* -----------------------nav部分结束--------------------- */
+/* -----------------------card部分开始--------------------- */
 .cards{
     margin: 35rpx 0;
     width: 90%;
@@ -74,20 +107,21 @@ page {
     flex-direction: column;
     gap: 40rpx;
 }
-.cards .card{
+/* -----------------------normal_card部分开始--------------------- */
+.cards .normal .card{
     box-shadow: 8rpx 6rpx 10rpx 4rpx rgba(0, 0, 0, 0.2);
     padding-bottom: 40rpx;
 }
-.cards .card > image{
+.cards .normal .card > image{
     height: 380rpx;
     width: 100%;
 }
-.cards .card .info{
+.cards .normal .card .info{
     display: flex;
     padding: 20rpx 40rpx 0;
     gap: 20rpx;
 }
-.cards .card .info .text{
+.cards .normal .card .info .text{
     font-size: 27rpx;
     font-weight: 500;
     display: flex;
@@ -95,19 +129,96 @@ page {
     gap: 20rpx;
     letter-spacing: 3rpx;
 }
-.cards .card .info .text .name{
+.cards .normal .card .info .text .name{
     font-size: 50rpx;
     font-weight: 700;
     letter-spacing: 13rpx;
 }
-.cards .card .info .img{
+.cards .normal .card .info .img{
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 25rpx;
     font-weight: 700;
 }
-.cards .card .info .img image{
+.cards .normal .card .info .img image{
     width: 120rpx;
     height: 120rpx;
+}
+.cards .normal .card .ranking{
+    display: none;
+}
+/* -----------------------normal_card部分结束--------------------- */
+/* -----------------------special_card部分开始--------------------- */
+.cards .special .card{
+    box-shadow: 8rpx 6rpx 10rpx 4rpx rgba(0, 0, 0, 0.2);
+    display: flex;
+    position: relative;
+}
+.cards .special .card > image{
+    height: 300rpx;
+    width: 330rpx;
+}
+.cards .special .card .info{
+    padding: 20rpx;
+}
+.cards .special .card .info .text .intro{
+    display: none;
+}
+.cards .special .card .info .text .name{
+    font-size: 50rpx;
+    font-weight: 700;
+    letter-spacing: 13rpx;
+    margin-bottom: 10rpx;
+}
+.cards .special .card .info .text .location{
+    font-size: 27rpx;
+    font-weight: 600;
+    letter-spacing: 3rpx;
+}
+.cards .special .card .info .img{
+    display: flex;
+    align-items: center;
+    padding: 10rpx 15rpx;
+}
+.cards .special .card .info .img image{
+    width: 120rpx;
+    height: 120rpx;
+}
+.cards .special .card .ranking{
+    position: absolute;
+    font-size: 120rpx;
+    font-weight: 700;
+    right: -20rpx;
+    top:-40rpx;
+    color: #d1c293;
+    /* width: 120rpx;
+    height: 120rpx; */
+    text-align: center;
+    line-height: 120rpx;
+    border-radius: 50%;
+    /* background-color: #ccc8bd; */
+}
+.unshow{
+    display: none;
+}
+/* -----------------------special_card部分结束--------------------- */
+/* -----------------------新建部分开始--------------------- */
+.new{
+    position: fixed;
+    bottom: 20rpx;
+    right: 20rpx;
+    width: 110rpx;
+    height: 110rpx;
+    background-color: #d1c293;
+    border-radius: 50%;
+    border: 8rpx double #fff;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.new image{
+    width: 90%;
+    height: 90%;
 }

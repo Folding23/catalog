@@ -1,1 +1,26 @@
 /* pages/live/live.wxss */
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30rpx;
+    padding: 20rpx 0;
+}
+.rooms{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.room{
+    /* border:1rpx solid red; */
+    width: 150rpx;
+    height: 46rpx;
+    text-align: center;
+    border-radius: 23rpx;
+    background-color: #d1c293;
+    color: #fff;
+}
+video{
+    width: 100%;
+}

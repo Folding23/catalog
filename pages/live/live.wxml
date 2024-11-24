@@ -1,2 +1,9 @@
-<!--pages/live/live.wxml-->
-<text>pages/live/live.wxml</text>
+<view class="container">
+    <view class="rooms">
+        <view class="room">直播间1</view>
+        <view class="room">直播间2</view>
+        <view class="room">直播间3</view>
+    </view>
+    <video src="hls://192.168.1.151:8888/l"/>
+    <live-player src="hls://192.168.1.151:8888/l"/>
+</view>
