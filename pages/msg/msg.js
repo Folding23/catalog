@@ -5,10 +5,20 @@ Page({
      * 页面的初始数据
      */
     data: {
+        unread_num:2,
         msgs:[{
-            content:"您提交的卡片未通过审核",
+            content:"您提交的卡片审核结果",
             read:false
-        }]
+        },{
+            content:"您提交的卡片审核结果",
+            read:false
+        },{
+            content:"您提交的卡片审核结果",
+            read:true
+        },{
+            content:"您提交的卡片审核结果",
+            read:true
+        },]
     },
 
     /**
@@ -18,6 +28,16 @@ Page({
 
     },
 
+    // 点击删除消息
+    clickDel(e){
+        console.log(e.currentTarget.dataset.index);
+        let index = e.currentTarget.dataset.index;
+        let arr = this.data.msgs;
+        arr.splice(index,1);
+        this.setData({
+            msgs:arr
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

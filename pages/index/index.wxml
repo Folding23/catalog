@@ -29,7 +29,58 @@
 </view>
 
 <view class="cards">
-    <navigator class="{{card_style}}" url="/pages/detail/detail" wx:for="{{cards}}">
+    <navigator class="normal {{card1_statu}}" url="/pages/detail/detail" wx:for="{{card1}}">
+        <view class="card">
+            <view class="ranking {{rank_show}}" wx:if="{{index+1}}">{{index+1}}</view>
+            <image src="{{item.img_src}}" mode="aspectFill"/>
+            <view class="info">
+                <view class="text">
+                    <view class="name">{{item.name}}</view>
+                    <text class="location"><text>地点：</text>{{item.location}}</text>
+                    <text class="intro">{{item.intro}}</text>
+                </view>
+                <view class="img">
+                    <image src="/img/点赞-off.png" mode=""/>
+                    <text class="like-num">{{item.like_num}}</text>
+                </view>
+            </view>
+        </view>
+    </navigator>
+    <navigator class="special {{card2_statu}}" url="/pages/detail/detail" wx:for="{{card2}}">
+        <view class="card">
+            <view class="ranking {{rank_show}}" wx:if="{{index+1}}">{{index+1}}</view>
+            <image src="{{item.img_src}}" mode="aspectFill"/>
+            <view class="info">
+                <view class="text">
+                    <view class="name">{{item.name}}</view>
+                    <text class="location"><text>地点：</text>{{item.location}}</text>
+                    <text class="intro">{{item.intro}}</text>
+                </view>
+                <view class="img">
+                    <image src="/img/点赞-off.png" mode=""/>
+                    <text class="like-num">{{item.like_num}}</text>
+                </view>
+            </view>
+        </view>
+    </navigator>
+    <navigator class="special {{card3_statu}}" url="/pages/detail/detail" wx:for="{{card3}}">
+        <view class="card">
+            <view class="ranking {{rank_show}}" wx:if="{{index+1}}">{{index+1}}</view>
+            <image src="{{item.img_src}}" mode="aspectFill"/>
+            <view class="info">
+                <view class="text">
+                    <view class="name">{{item.name}}</view>
+                    <text class="location"><text>地点：</text>{{item.location}}</text>
+                    <text class="intro">{{item.intro}}</text>
+                </view>
+                <view class="img">
+                    <image src="/img/点赞-off.png" mode=""/>
+                    <text class="like-num">{{item.like_num}}</text>
+                </view>
+            </view>
+        </view>
+    </navigator>
+    <navigator class="special {{card4_statu}}" url="/pages/detail/detail" wx:for="{{card4}}">
         <view class="card">
             <view class="ranking {{rank_show}}" wx:if="{{index+1}}">{{index+1}}</view>
             <image src="{{item.img_src}}" mode="aspectFill"/>
