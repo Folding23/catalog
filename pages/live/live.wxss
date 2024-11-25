@@ -28,3 +28,18 @@ page{
     width: 100%;
     height: 100%;
 }
+.info{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    color: rgba(255, 255, 255, 1);
+    font-size: 44rpx;
+    padding: 30rpx;
+    bottom: 0;
+    left: 0;
+    width: 500rpx;
+    height: 200rpx;
+}
+.info .intro{
+    font-size: 30rpx;
+}
