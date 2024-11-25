@@ -4,8 +4,5 @@
         <view class="room">直播间2</view>
         <view class="room">直播间3</view>
     </view>
-    <video-swiper videos-list="{{videos}}" />
-    <!-- <video src="hls://192.168.1.151:8888/l"/>
-    <video src="hls://192.168.1.151:8888/l"/>
-    <video src="hls://192.168.1.151:8888/l"/> -->
+    <video-swiper video-list="{{videos}}" class="video-swiper"/>
 </view>
