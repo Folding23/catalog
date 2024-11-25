@@ -99,6 +99,10 @@
     </navigator>
 </view>
 
+<picker mode="selector">
+    
+</picker>
+
 <navigator url="/pages/new/new" class="new">
     <image src="/img/追加.png" mode=""/>
 </navigator>
