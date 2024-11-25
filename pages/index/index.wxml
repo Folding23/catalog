@@ -18,10 +18,10 @@
         <image src="/img/推荐.png" mode=""/>
         <text>推荐</text>
     </view>
-    <view class="btn {{style2}}" bindtap="selected2">
+    <picker class="btn {{style2}}" bindtap="selected2" mode="selector" range="{{rank}}" value="{{index}}">
         <image src="/img/点赞排名.png" mode=""/>
         <text>点赞排名</text>
-    </view>
+    </picker>
     <view class="btn {{style3}}" bindtap="selected3">
         <image src="/img/我的关注.png" mode=""/>
         <text>我的关注</text>
@@ -99,10 +99,10 @@
     </navigator>
 </view>
 
-<picker mode="selector">
-    
+<picker mode="selector" range="{{rank}}" value="{{index}}">
+    {{rank[index]}}
 </picker>
 
-<navigator url="/pages/new/new" class="new">
+<navigator class="new" url="/pages/new/new">
     <image src="/img/追加.png" mode=""/>
 </navigator>
