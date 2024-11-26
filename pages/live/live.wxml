@@ -4,7 +4,7 @@
         <view class="room">直播间2</view>
         <view class="room">直播间3</view>
     </view>
-    <video-swiper class="video-swiper" video-list="{{videos}}"
+    <video-swiper class="video-swiper" loop="{{false}}" video-list="{{videos}}"
     bindchange="onChange"
     />
     <view class="info">

@@ -30,12 +30,19 @@ Page({
 
     // 点击删除消息
     clickDel(e){
-        console.log(e.currentTarget.dataset.index);
-        let index = e.currentTarget.dataset.index;
-        let arr = this.data.msgs;
-        arr.splice(index,1);
-        this.setData({
-            msgs:arr
+        wx.showModal({
+          title: '确认删除',
+          content: '',
+          complete: (res) => {
+            if (res.confirm) {
+                let index = e.currentTarget.dataset.index;
+                let arr = this.data.msgs;
+                arr.splice(index,1);
+                this.setData({
+                    msgs:arr
+                })
+            }
+          }
         })
     },
     /**

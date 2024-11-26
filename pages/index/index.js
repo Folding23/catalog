@@ -1,273 +1,133 @@
-import { authGate } from '../../utils/utils.js'
-
 Page({
-    "data": {
-        style1: "selected",
-        style2: "",
-        style3: "",
-        rank_show: "",
-        card1_statu: "",
-        card2_statu: "unshow",
-        card3_statu: "unshow",
-        card4_statu: "unshow",
-        new_msg: true,
-        cards: [{
-            img_src: "/img/cat.jpg",
-            name: "橘猫",
-            location: "不在福州大学",
-            intro: "已绝育，未领养，性格温和，白天喜欢睡觉",
-            like_num: 143223
-        }, {
-            img_src: "/img/cat.jpg",
-            name: "暹罗猫",
-            location: "不在福州大学",
-            intro: "已绝育，未领养，性格温和，白天喜欢睡觉",
-            like_num: 143223
+    "data":{
+        style1:"selected",
+        style2:"",
+        style3:"",
+        rank_show:"",
+        showing:"cards",// totalrank,dailyrank,time,recent,search
+        new_msg:true,
+        rank:["总点赞量","单日点赞量"],
+        follow:["关注时间","最近更新"],
+        index:0,
+        show_H:false,
+        search_history:["猫A","cat_B","cat_c","猫A","cat_B","cat_c","猫A","cat_B","cat_c"],
+        cards:[{
+            img_src:"/img/cat.jpg",
+            name:"推荐",
+            location:"不在福州大学",
+            intro:"已绝育，未领养，性格温和，白天喜欢睡觉",
+            like_num:143223
         }],
-        totolrank: [
-            {
-                img_src: "/img/cat.jpg",
-                name: "橘猫",
-                location: "不在福州大学",
-                intro: "已绝育，未领养，性格温和，白天喜欢睡觉",
-                like_num: 143223
-            }, {
-                img_src: "/img/cat.jpg",
-                name: "暹罗猫",
-                location: "不在福州大学",
-                intro: "已绝育，未领养，性格温和，白天喜欢睡觉",
-                like_num: 143223
-            }
-        ],
-        dailyrank: [{
-            img_src: "/img/cat.jpg",
-            name: "橘猫",
-            location: "不在福州大学",
-            intro: "已绝育，未领养，性格温和，白天喜欢睡觉",
-            like_num: 143223
-        }, {
-            img_src: "/img/cat.jpg",
-            name: "暹罗猫",
-            location: "不在福州大学",
-            intro: "已绝育，未领养，性格温和，白天喜欢睡觉",
-            like_num: 143223
+        totalrank:[{
+            img_src:"/img/cat.jpg",
+            name:"totalran",
+            location:"不在福州大学",
+            intro:"已绝育，未领养，性格温和，白天喜欢睡觉",
+            like_num:143223
         }],
-        follower: [{
-            img_src: "/img/cat.jpg",
-            name: "橘猫",
-            location: "不在福州大学",
-            intro: "已绝育，未领养，性格温和，白天喜欢睡觉",
-            like_num: 143223
-        }, {
-            img_src: "/img/cat.jpg",
-            name: "暹罗猫",
-            location: "不在福州大学",
-            intro: "已绝育，未领养，性格温和，白天喜欢睡觉",
-            like_num: 143223
+        dailyrank:[{
+            img_src:"/img/cat.jpg",
+            name:"daily",
+            location:"不在福州大学",
+            intro:"已绝育，未领养，性格温和，白天喜欢睡觉",
+            like_num:143223
         }],
-        offset: 0,
-        loading: false
+        time:[{
+            img_src:"/img/cat.jpg",
+            name:"time",
+            location:"不在福州大学",
+            intro:"已绝育，未领养，性格温和，白天喜欢睡觉",
+            like_num:143223
+        }],
+        recent:[{
+            img_src:"/img/cat.jpg",
+            name:"recent",
+            location:"不在福州大学",
+            intro:"已绝育，未领养，性格温和，白天喜欢睡觉",
+            like_num:143223
+        }],
+        search_result:[{
+            img_src:"/img/cat.jpg",
+            name:"search",
+            location:"不在福州大学",
+            intro:"已绝育，未领养，性格温和，白天喜欢睡觉",
+            like_num:143223
+        }],
+        key_word:"",
     },
-
-    selected1() {
+    
+    // 点击显示推荐
+    selected1(){
         this.setData({
-            style1: "selected",
-            style2: "",
-            style3: "",
-            card1_statu: "",
-            card2_statu: "unshow",
-            card3_statu: "unshow",
-            card4_statu: "unshow",
+            style1:"selected",
+            style2:"",
+            style3:"",
+            showing:"cards"
         })
     },
-    selected2() {
+    // 点击显示点赞排名
+    selected2(){
         this.setData({
-            style1: "",
-            style2: "selected",
-            style3: "",
-            card1_statu: "unshow",
-            card2_statu: "",
-            card3_statu: "unshow",
-            card4_statu: "unshow",
-            rank_show: ""
+            style1:"",
+            style2:"selected",
+            style3:"",
         })
     },
-    selected3() {
+    // 点击显示我的关注
+    selected3(){
         this.setData({
-            style1: "",
-            style2: "",
-            style3: "selected",
-            card1_statu: "unshow",
-            card2_statu: "unshow",
-            card3_statu: "",
-            card4_statu: "unshow",
-            rank_show: "unshow"
+            style1:"",
+            style2:"",
+            style3:"selected",
         })
     },
-    Login() {
-        wx.login({
-            success: (res) => {
-                console.log(res)
-                wx.request({
-                    url: authGate.data.ip + "/user/login",
-                    method: "POST",
-                    header: {
-                        "Content-Type": "application/json",
-                    },
-                    data: {
-                        "code": res.code
-                    },
-                    success: (res) => {
-                        console.log("登入成功:")
-                        console.log(res)
-                        authGate.SetToken(res.data)
-                    },
-                    fail: (res) => {
-                        console.log("request 失败:")
-                        console.log(res)
-                    }
-                })
-            },
-            fail: (res) => {
-                console.log("登入失败:")
-                console.log(res)
-            }
-        })
-    },
-    GetCard() {
-        wx.showLoading({
-            title: '加载中',
-        })
+    // 搜索栏获得焦点时，显示搜索历史
+    showHistory(){
         this.setData({
-            loading: true
-        })
-        this.onLocation().then((res) => {
-            const value = res; // 在这里获取到位置信息
-
-            const num = 10;
-            wx.request({
-                url: authGate.data.ip + "/user/home",
-                method: "GET",
-                header: {
-                    "Authorization": authGate.GetToken()
-                },
-                data: {
-                    "num": num,
-                    "offset": this.data.offset,
-                    "longitude": value.first, // 使用获取到的值
-                    "latitude": value.second   // 使用获取到的值
-                },
-                success: (res) => {
-                    console.log(res);
-                    this.setData({
-                        cards: this.data.cards + res.data,
-                        offset: this.data.offset + num
-                    });
-                },
-                fail: (res) => {
-                    console.log("request 失败:");
-                    console.log(res);
-                },
-                complete: () => {
-                    wx.hideLoading();
-                    this.setData({
-                        loading: false
-                    });
-                }
-            });
-        }).catch((error) => {
-            console.log(error);
-        });
-    },
-    onLoad() {
-        // this.Login()
-        // this.GetCard()
-    },
-    onsearch() {
-
-        wx.request({
-            url: authGate.data.ip + "/card",
-            method: "POST",
-            data: {
-                token: authGate.GetToken()
-            },
-            success: (res) => {
-                console.log(res)
-                this.setData({
-                    cards: res.data
-                })
-            },
-            fail: (res) => {
-                console.log("request 失败:")
-                console.log(res)
-            }
+            show_H:true,
         })
     },
-    onLocation() {
-        return new Promise((resolve, reject) => {
-            wx.getLocation({
-                type: "wgs84",
-                success: (res) => {
-                    resolve({
-                        first: res.latitude,
-                        second: res.longitude
-                    })
-                },
-                fail: (error) => {
-                    reject(error)
-                }
-
+    // 失焦关闭搜索历史
+    hideHistory(){
+        this.setData({
+            show_H:false,
+        })
+    },
+    // 点击搜索历史，可以直接出现在搜索文本框里
+    useHistory(e){
+        let history_index = e.currentTarget.dataset.index;
+        let key_word = this.data.search_history[history_index];
+        this.setData({
+            key_word,
+        })
+    },
+    // 选择总点赞量或单日点赞量排行榜
+    totalOrDaily(e){
+        console.log(e.detail.value);
+        let index = e.detail.value;
+        if(index == 1){
+            this.setData({
+                showing:"dailyrank",
             })
-        })
-    },
-    onReachBottom: function () {
-        if (this.data.loading) {
-            return
+        }else{
+            this.setData({
+                showing:"totalrank",
+            })
         }
-        this.GetCard()
     },
-    onGetTotalRank() {
-        wx.request({
-            url: authGate.data.ip + "/user/total_ranklist",
-            method: "GET",
-            header: {
-                "Authorization": authGate.GetToken()
-            },
-            success: (res) => {
-                this.setData({
-                    totolrank: this.data.totolrank + res.data
-                })
-            },
-            fail: (res) => {
-                console.log("request 失败:")
-                console.log(res)
-            }
-        })
-    },
-    onGetDailyRank() {
-        wx.request({
-            url: authGate.data.ip + "/user/daily_ranklist",
-            method: "GET",
-            header: {
-                "Authorization": authGate.GetToken()
-            },
-            success: (res) => {
-                this.setData({
-                    dailyrank: this.data.dailyrank + res.data
-                })
-            },
-            fail: (res) => {
-                console.log("request 失败:")
-                console.log(res)
-            }
-        })
-    },
-    onGetRank() {
-        wx.loading({
-            title: '加载中',
-        })
-        this.onGetTotalRank()
-        this.onGetDailyRank()
-        wx.hideLoading()
+    // 根据关注时间或最近更新
+    timeOrRecent(e){
+        console.log(e.detail.value);
+        let index = e.detail.value;
+        if(index == 1){
+            this.setData({
+                showing:"recent",
+            })
+        }else{
+            this.setData({
+                showing:"time",
+            })
+        }
     }
 })
+

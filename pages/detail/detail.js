@@ -39,7 +39,9 @@ Page({
             },
         ],
         showing_photo:"/img/cat.jpg",
-        display:"none"
+        display:false,
+        is_like_new:false,
+        is_star_new:false
     },
 
     /**
@@ -48,19 +50,31 @@ Page({
     onLoad(options) {
 
     },
+    // 点击改变点赞样式
+    changeLike(){
+        this.setData({
+            is_like_new:!this.data.is_like_new
+        })
+    },
+    // 点击改变收藏样式
+    changeStar(){
+        this.setData({
+            is_star_new:!this.data.is_star_new
+        })
+    },
     // 点击图片，显示大图
     tapPhoto(e){
         console.log();
         let src = e.currentTarget.dataset.photosrc;
         this.setData({
             showing_photo:src,
-            display:"",
+            display:true,
         })
     },
     // 点击大图，关闭显示
     clickClose(){
         this.setData({
-            display:"none",
+            display:false,
         })
     },
     /**

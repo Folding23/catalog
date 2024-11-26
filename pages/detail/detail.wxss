@@ -36,13 +36,27 @@ page {
 .photos{
     display: flex;
     flex-direction: column;
-    gap: 20rpx;
     width: 90%;
+}
+.photos .month{
+    display: flex;
+    align-items: center;
+    gap: 13rpx;
+}
+.photos .month image{
+    width: 50rpx;
+    height: 50rpx;
+}
+.photos .line{
+    border-bottom: 8rpx solid #d1c293;
+    width: 99%;
+    margin: 10rpx 0;
 }
 .photos .img_box{
     display: flex;
     gap: 15rpx;
     flex-wrap: wrap;
+    margin-bottom: 20rpx;
 }
 .photos .img_box image{
     width: 215rpx;

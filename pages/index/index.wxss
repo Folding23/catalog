@@ -67,6 +67,32 @@ page {
     border-radius: 50%;
 }
 /* -----------------------msg部分结束--------------------- */
+/* -----------------------history部分开始----------------- */
+.history{
+    width: 87%;
+    background: #ddcd9d;
+    color: #fff;
+    padding: 20rpx;
+    box-sizing: border-box;
+    margin-top: 20rpx;
+    border-radius: 20rpx;
+}
+.history .title{
+    font-size: 27rpx;
+    letter-spacing: 5rpx;
+}
+.history .text-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15rpx;
+    margin-top: 20rpx;
+}
+.history text{
+    font-size: 28rpx;
+    padding: 5rpx 10rpx;
+    border: 4rpx solid #fff;
+    border-radius: 18rpx;
+}
 /* -----------------------nav部分开始--------------------- */
 .nav{
     display: flex;
@@ -96,6 +122,14 @@ page {
 .btn image{
     width: 50rpx;
     height: 50rpx;
+}
+picker{
+    position: relative;
+}
+picker text{
+    position: absolute;
+    top: 8rpx;
+    right: 12rpx;
 }
 /* -----------------------nav部分结束--------------------- */
 /* -----------------------card部分开始--------------------- */
@@ -143,9 +177,6 @@ page {
 .cards .normal .card .info .img image{
     width: 120rpx;
     height: 120rpx;
-}
-.cards .normal .card .ranking{
-    display: none;
 }
 /* -----------------------normal_card部分结束--------------------- */
 /* -----------------------special_card部分开始--------------------- */
@@ -198,11 +229,7 @@ page {
     border-radius: 50%;
     /* background-color: #ccc8bd; */
 }
-.unshow{
-    display: none;
-}
 /* -----------------------special_card部分结束--------------------- */
-/* -----------------------picker部分开始------------------------- */
 
 /* -----------------------新建部分开始--------------------- */
 .new{

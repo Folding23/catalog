@@ -23,8 +23,9 @@
     </view>
 
     <view class="img ipt">
-        <view class="select_img">
-            <image src="/img/图片.png" mode=""/>
+        <image wx:if="{{img_src.length}}" src="{{img_src}}" mode="aspectFill"/>
+        <view wx:else class="select_img">
+            <image src="/img/图片.png" mode="aspectFill"/>
         </view>
     </view>
 
