@@ -10,7 +10,7 @@ page{
     align-items: center;
     height: 100%;
 }
-.rooms{
+/* .rooms{
     display: flex;
     width: 100%;
     padding: 20rpx ;
@@ -23,7 +23,7 @@ page{
     border-radius: 23rpx;
     background-color: #d1c293;
     color: #fff;
-}
+} */
 .video-swiper{
     width: 100%;
     height: 100%;

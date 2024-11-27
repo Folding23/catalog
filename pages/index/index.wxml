@@ -12,7 +12,7 @@
     </navigator>
 </view>
 
-<view class="history" wx:if="{{show_H}}">
+<view class="history" wx:if="{{show_H && search_history.length}}">
     <view class="title">搜索历史：</view>
     <view class="text-wrap">
         <text wx:for="{{search_history}}" wx:key="index" bindtap="useHistory" data-index="{{index}}">{{item}}</text>

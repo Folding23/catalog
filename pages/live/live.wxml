@@ -1,14 +1,14 @@
 <view class="container">
-    <view class="rooms">
-        <view class="room">直播间1</view>
+    <!-- <view class="rooms">
+        <view class="room" bindtap="switch">直播间1</view>
         <view class="room">直播间2</view>
         <view class="room">直播间3</view>
-    </view>
-    <video-swiper class="video-swiper" loop="{{false}}" video-list="{{videos}}"
-    bindchange="onChange"
+    </view> -->
+    <video-swiper class="video-swiper" loop="false" video-list="{{videos}}"
+    bindchange="onChange" duration="500"
     />
     <view class="info">
-        <text class="name">{{name}}</text>
-        <text class="intro">{{intro}}</text>
+        <text class="name">{{info[index].name}}</text>
+        <text class="intro">{{info[index].intro}}</text>
     </view>
 </view>
