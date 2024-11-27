@@ -70,8 +70,8 @@ page {
 /* -----------------------history部分开始----------------- */
 .history{
     width: 87%;
-    background: #ddcd9d;
-    color: #fff;
+    background: #dfcd97;
+    color: rgb(255, 255, 255);
     padding: 20rpx;
     box-sizing: border-box;
     margin-top: 20rpx;
@@ -79,7 +79,8 @@ page {
 }
 .history .title{
     font-size: 27rpx;
-    letter-spacing: 5rpx;
+    font-weight: 600;
+    letter-spacing: 7rpx;
 }
 .history .text-wrap{
     display: flex;

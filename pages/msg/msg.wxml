@@ -1,7 +1,10 @@
 <view class="container">
     <view class="head">
-        <view class="text">消息列表</view>
-        <view class="unread_num" wx:if="{{unread_num}}">{{unread_num}}</view>
+        <view class="text">
+            消息列表
+            <view class="unread_num" wx:if="{{unread_num}}">{{unread_num}}</view>
+        </view>
+        <view class="read_all">全部已读</view>
     </view>
     <view class="msg-wrap">
         <view url="/pages/msgDetail/msgDetail" class="msg" wx:for="{{msgs}}">

@@ -10,8 +10,13 @@
 .head{
     width: 90%;
     display: flex;
-    gap: 30rpx;
+    justify-content: space-between;
     align-items: center;
+}
+.head .text{
+    display: flex;
+    align-items: center;
+    gap: 18rpx;
 }
 .unread_num{
     width: 35rpx;
@@ -22,6 +27,14 @@
     line-height: 35rpx;
     font-size: 26rpx;
     border-radius: 50%;
+}
+.head .read_all{
+    font-size: 24rpx;
+    font-weight: 600;
+    background-color: #d1c293;
+    color: #fff;
+    padding: 5rpx 10rpx;
+    border-radius: 20rpx;
 }
 .head .del-btn image{
     width: 50rpx;

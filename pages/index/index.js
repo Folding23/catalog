@@ -10,7 +10,8 @@ Page({
         follow:["关注时间","最近更新"],
         index:0,
         show_H:false,
-        search_history:["猫A","cat_B","cat_c","猫A","cat_B","cat_c","猫A","cat_B","cat_c"],
+        search_history:["猫A"],
+        // search_history:["猫A","cat_B","cat_c","猫A","cat_B","cat_c","猫A","cat_B","cat_c"],
         cards:[{
             img_src:"/img/cat.jpg",
             name:"推荐",
