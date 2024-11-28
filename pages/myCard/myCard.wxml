@@ -1,0 +1,32 @@
+<view class="container">
+    <view class="no_card" wx:if="{{!cards.length}}">
+        
+    </view>
+    <view class="head" wx:if="{{cards.length}}">
+        <view class="text">我的卡片：{{cards.length}}</view>
+        <view class="del-btn">
+        <image src="/img/删除-white.png" mode="aspectFit"/>
+        删除</view>
+    </view>
+    <view class="cards" wx:if="{{cards.length}}">
+        <navigator class="normal" url="/pages/detail/detail" wx:for="{{cards}}" wx:key="index">
+            <view class="card">
+                <image src="{{item.img_src}}" mode="aspectFill"/>
+                <view class="info">
+                    <view class="text">
+                        <view class="name">{{item.name}}</view>
+                        <text class="location"><text>地点：</text>{{item.location}}</text>
+                        <text class="intro">{{item.intro}}</text>
+                    </view>
+                    <view class="img">
+                        <image src="/img/点赞-off.png" mode=""/>
+                        <text class="like-num">{{item.like_num}}</text>
+                    </view>
+                </view>
+                <view class="overlay" data-index="{{index}}" catchtap="clickDel">
+                    <image src="/img/删除.png" mode="aspectFit" wx:if="{{delete}}" />
+                </view>
+            </view>
+        </navigator>
+    </view>
+</view>

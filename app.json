@@ -8,7 +8,8 @@
         "pages/my/feekback/feekback",
         "pages/my/attention/attention",
         "pages/msg/msg",
-        "pages/msgDetail/msgDetail"
+        "pages/msgDetail/msgDetail",
+        "pages/myCard/myCard"
     ],
     "window": {
         "navigationBarBackgroundColor": "#d1c293",

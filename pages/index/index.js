@@ -55,6 +55,7 @@ Page({
             like_num:143223
         }],
         key_word:"",
+        this_card:{},
     },
     
     // 点击显示推荐
@@ -129,6 +130,54 @@ Page({
                 showing:"time",
             })
         }
+    },
+    clickCards(e){
+        let index = e.currentTarget.dataset.index;
+        let this_card = this.data.cards[index];
+        this.setData({
+            this_card,
+        })
+        console.log(this.data.this_card);
+    },
+    clickTotal(e){
+        let index = e.currentTarget.dataset.index;
+        let this_card = this.data.totalrank[index];
+        this.setData({
+            this_card,
+        })
+        console.log(this.data.this_card);
+    },
+    clickDaily(e){
+        let index = e.currentTarget.dataset.index;
+        let this_card = this.data.dailyrank[index];
+        this.setData({
+            this_card,
+        })
+        console.log(this.data.this_card);
+    },
+    clickTime(e){
+        let index = e.currentTarget.dataset.index;
+        let this_card = this.data.time[index];
+        this.setData({
+            this_card,
+        })
+        console.log(this.data.this_card);
+    },
+    clickRecent(e){
+        let index = e.currentTarget.dataset.index;
+        let this_card = this.data.recent[index];
+        this.setData({
+            this_card,
+        })
+        console.log(this.data.this_card);
+    },
+    clickSearchResult(e){
+        let index = e.currentTarget.dataset.index;
+        let this_card = this.data.search_result[index];
+        this.setData({
+            this_card,
+        })
+        console.log(this.data.this_card);
     }
 })
 

@@ -37,10 +37,12 @@
                   邀请好友
                 </button>
               </view>
-              <view class="choose-item">
-                <image src="../../../images/my/index/like.png" />
-                <view class="title" bindtap="onAttention">我关注的卡片</view>
-              </view>
+            <navigator url="/pages/myCard/myCard">
+                <view class="choose-item">
+                    <image src="../../../images/my/index/like.png" />
+                    <view class="title" bindtap="onAttention">我创建的卡片</view>
+                </view>
+            </navigator>
               <view class="choose-item">
                 <image src="../../../images/my/index/bubble.png" />
                 <view class="title" bindtap="onFeedback">信息反馈</view>

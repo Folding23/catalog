@@ -9,6 +9,13 @@
         "miniprogram": {
             "list": [
                 {
+                    "name": "pages/myCard/myCard",
+                    "pathName": "pages/myCard/myCard",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
                     "name": "pages/msgDetail/msgDetail",
                     "pathName": "pages/msgDetail/msgDetail",
                     "query": "",

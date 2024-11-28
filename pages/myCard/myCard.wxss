@@ -1,0 +1,90 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+.head {
+    width: 89%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20rpx 0;
+}
+.head .text,.del-btn{
+    background-color: #d1c293;
+    color: #ffffff;
+    padding: 5rpx 10rpx;
+    border-radius: 15rpx;
+    font-size: 30rpx;
+}
+.del-btn{
+    display: flex;
+    gap: 10rpx;
+    align-items: center;
+}
+.del-btn image{
+    width: 45rpx;
+    height: 45rpx;
+}
+.cards{
+    margin-bottom: 35rpx;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 40rpx;
+}
+/* -----------------------normal_card部分开始--------------------- */
+.cards .normal .card{
+    box-shadow: 8rpx 6rpx 10rpx 4rpx rgba(0, 0, 0, 0.2);
+    padding-bottom: 40rpx;
+    position: relative;
+}
+.cards .normal .card > image{
+    height: 380rpx;
+    width: 100%;
+}
+.cards .normal .card .info{
+    display: flex;
+    padding: 20rpx 40rpx 0;
+    gap: 20rpx;
+}
+.cards .normal .card .info .text{
+    font-size: 27rpx;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 20rpx;
+    letter-spacing: 3rpx;
+}
+.cards .normal .card .info .text .name{
+    font-size: 50rpx;
+    font-weight: 700;
+    letter-spacing: 13rpx;
+}
+.cards .normal .card .info .img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25rpx;
+    font-weight: 700;
+}
+.cards .normal .card .info .img image{
+    width: 120rpx;
+    height: 120rpx;
+}
+.overlay{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .7);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.overlay image{
+    width: 250rpx;
+    height: 250rpx;
+}
+/* -----------------------normal_card部分结束--------------------- */

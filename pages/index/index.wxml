@@ -36,7 +36,7 @@
 
 <view class="cards">
     <navigator class="normal" url="/pages/detail/detail" wx:for="{{cards}}" wx:key="index" wx:if="{{showing=='cards'}}">
-        <view class="card">
+        <view class="card" bindtap="clickCards" data-index="{{index}}">
             <image src="{{item.img_src}}" mode="aspectFill"/>
             <view class="info">
                 <view class="text">
@@ -52,7 +52,7 @@
         </view>
     </navigator>
     <navigator class="special" url="/pages/detail/detail" wx:for="{{totalrank}}" wx:if="{{showing=='totalrank'}}" wx:key="index">
-        <view class="card">
+        <view class="card" bindtap="clickTotal" data-index="{{index}}">
             <view class="ranking" wx:if="{{index+1}}">{{index+1}}</view>
             <image src="{{item.img_src}}" mode="aspectFill"/>
             <view class="info">
@@ -69,7 +69,7 @@
         </view>
     </navigator>
     <navigator class="special" url="/pages/detail/detail" wx:for="{{dailyrank}}" wx:if="{{showing=='dailyrank'}}" wx:key="index">
-        <view class="card">
+        <view class="card" bindtap="clickDaily" data-index="{{index}}">
             <view class="ranking" wx:if="{{index+1}}">{{index+1}}</view>
             <image src="{{item.img_src}}" mode="aspectFill"/>
             <view class="info">
@@ -86,7 +86,7 @@
         </view>
     </navigator>
     <navigator class="special" url="/pages/detail/detail" wx:for="{{time}}" wx:if="{{showing=='time'}}" wx:key="index">
-        <view class="card">
+        <view class="card" bindtap="clickTime" data-index="{{index}}">
             <image src="{{item.img_src}}" mode="aspectFill"/>
             <view class="info">
                 <view class="text">
@@ -102,7 +102,7 @@
         </view>
     </navigator>
     <navigator class="special" url="/pages/detail/detail" wx:for="{{recent}}" wx:if="{{showing=='recent'}}" wx:key="index">
-        <view class="card">
+        <view class="card" bindtap="clickRecnet" data-index="{{index}}">
             <image src="{{item.img_src}}" mode="aspectFill"/>
             <view class="info">
                 <view class="text">
@@ -118,7 +118,7 @@
         </view>
     </navigator>
     <navigator class="special" url="/pages/detail/detail" wx:for="{{search_result}}" wx:if="{{showing=='search'}}" wx:key="index">
-        <view class="card">
+        <view class="card" bindtap="clickSearchResult" data-index="{{index}}">
             <image src="{{item.img_src}}" mode="aspectFill"/>
             <view class="info">
                 <view class="text">
